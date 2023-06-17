@@ -1,0 +1,214 @@
+/* primaryOrange #f27f0c */ /* buttons and banner will have this color*/
+/* accentBlue #053f5c */ /* texts and headers will have this color*/
+/* offwhite #e8e5e0 */ /* mostly backgrounds , hovers will have this color*/
+.container {
+  position: relative;
+}
+
+.header {
+  /* display:flex;
+  align-items:center;
+  justify-content:space-between; */
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 2px 3px -1px rgba(232, 229, 224, 0.75);
+  -webkit-box-shadow: 0px 2px 3px -1px rgba(232, 229, 224, 0.75);
+  -moz-box-shadow: 0px 2px 3px -1px rgba(232, 229, 224, 0.75);
+}
+
+.logo {
+  text-align: center;
+  color: #f27f0c;
+}
+
+.input {
+  padding: 0.4rem;
+  font-weight: 600;
+  border-radius: 6px;
+  /* outline: none; */
+  border: 1px solid #e8e5e0;
+  color: #053f5c;
+  margin-bottom: 6px;
+}
+.button,
+.disabled {
+  padding: 0.4rem 1rem;
+  background-color: #f27f0c;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin: 0 6px;
+}
+.disabled {
+  cursor: default;
+  background-color: #f27f0cbf;
+}
+
+.AllTalks {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0px 0px 3px 2px rgba(128, 122, 121, 0.15);
+  -webkit-box-shadow: 0px 0px 3px 2px rgba(128, 122, 121, 0.15);
+  -moz-box-shadow: 0px 0px 3px 2px rgba(128, 122, 121, 0.15);
+}
+.AllTalksHeader {
+  color: #053f5c;
+  border-bottom: 1px solid #e8e5e0;
+  padding-bottom: 6px;
+}
+.talk {
+  display: flex;
+  border: 1px solid #e8e5e0;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  margin: 4px auto;
+  /* overflow:hidden; */
+}
+.talk:hover {
+  background-color: #e8e5e0;
+}
+
+.talkTitle {
+  margin: 0;
+  margin-bottom: 8px;
+  color: #053f5c;
+}
+
+.space {
+  text-decoration: none;
+}
+.talkDetail {
+  width: 150px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: black;
+  font-size: small;
+}
+.deleteT {
+  margin: 0;
+  padding: 0.4rem 1rem;
+  background-color: #ff0e0e;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: white;
+  visibility: visible;
+}
+
+.mainmodal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8e5e0cc;
+}
+
+.modalBox {
+  /* width: 250px; */
+  background-color: white;
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 3px 2px rgba(128, 122, 121, 0.15);
+  -webkit-box-shadow: 0px 0px 3px 2px rgba(128, 122, 121, 0.15);
+  -moz-box-shadow: 0px 0px 3px 2px rgba(128, 122, 121, 0.15);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.top h3 {
+  color: #053f5c;
+}
+
+.top p {
+  color: #ff0e0e;
+  cursor: pointer;
+}
+
+.modalBox .input {
+  width: 250px;
+}
+
+.namelist {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.scroll {
+  border: 1px inset #e8e5e0;
+  height: 150px;
+  overflow-y: scroll;
+  width: 250px;
+  padding: 8px;
+}
+
+.scroll input {
+  margin-right: 8px;
+}
+
+.addManually {
+  border-top: 1px solid #e8e5e0;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e8e5e0;
+}
+
+.error {
+  font-size: 10px;
+  color: #ff0e0e;
+}
+
+@media only screen and (min-width: 512px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .AllTalks {
+    min-width: 500px;
+    width: fit-content;
+  }
+
+  .talkDetail {
+    min-width: 250px;
+    max-width: 500px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .deleteT {
+    margin: 0;
+    padding: 0.4rem 1rem;
+    background-color: #ff0e0e;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: white;
+    visibility: hidden;
+  }
+  .talk:hover .deleteT {
+    visibility: visible;
+  }
+}
