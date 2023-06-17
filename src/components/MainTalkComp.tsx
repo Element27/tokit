@@ -8,20 +8,7 @@ import { talkApi } from "../hook/apiHelper";
 
 function MainTalk() {
   // `https://conference-api.onrender.com/${endpoint}`
-  const {
-    container,
-    header,
-    logo,
-    input,
-    button,
-    AllTalks,
-    AllTalksHeader,
-    talk,
-    talkTitle,
-    talkDetail,
-    deleteT,
-    space,
-  } = styles;
+  const { container, header, logo, button, AllTalks, AllTalksHeader } = styles;
 
   const [modal, setModal] = useState(false);
   const [attmodal, setAttModal] = useState(true);

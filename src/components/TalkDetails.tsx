@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { talkApi } from "../hook/apiHelper";
 import styles from "./TD.module.css";
@@ -11,7 +11,7 @@ const {
   chat,
   chats,
   flex,
-  sender,
+
   time,
   chatbody,
   list,
@@ -34,7 +34,7 @@ export default function TalkDetails() {
     talkApi({ method: "GET", endpoint: "talk/" + talkId })
       .then((res) => {
         console.log(res);
-        const { id, attendees, chats, title } = res;
+        const { attendees, chats, title } = res;
         // const { attId: _id, email, name } = attendees;
         // const { chatid: _id, sender, message, dateCreated } = chats;
 
@@ -47,7 +47,7 @@ export default function TalkDetails() {
           setallAttendees(res);
         });
       });
-  }, []);
+  }, [talkId]);
 
   // chats
   const displayChats =

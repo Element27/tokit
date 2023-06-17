@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import styles from "./mtstyles.module.css";
 import { talkApi } from "../hook/apiHelper";
@@ -8,13 +8,9 @@ const {
   modalBox,
   input,
   close,
-  AllTalksHeader,
-  scroll,
+
   disabled,
   top,
-  namelist,
-  addManually,
-  error,
 } = styles;
 
 export default function CreateAttendee({ setAttModal }) {

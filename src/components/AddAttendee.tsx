@@ -1,22 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
 import styles from "./mtstyles.module.css";
 import { talkApi } from "../hook/apiHelper";
 
-const {
-  mainmodal,
-  button,
-  modalBox,
-  input,
-  close,
-  AllTalksHeader,
-  scroll,
-  disabled,
-  top,
-  namelist,
-  addManually,
-  error,
-} = styles;
+const { button, namelist, scroll } = styles;
 export default function AddAttendee({ data, talkid }) {
   const [att, setAll] = useState([]);
 

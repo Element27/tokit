@@ -9,12 +9,10 @@ export default function CreateTalkModal({ setModal }) {
     modalBox,
     input,
     close,
-    AllTalksHeader,
     scroll,
     disabled,
     top,
     namelist,
-    addManually,
     error,
   } = styles;
 

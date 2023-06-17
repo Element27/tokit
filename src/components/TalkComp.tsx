@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./mtstyles.module.css";
 const { talk, talkTitle, talkDetail, space, deleteT } = styles;
 
